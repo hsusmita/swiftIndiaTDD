@@ -41,6 +41,29 @@ class FormFieldTests: XCTestCase {
 		XCTAssert(formField.value == 7)
 	}
 
+	func test_FormField_IsValid_String() {
+		let validatingFunction: (String) -> Bool = { string in
+			return string.characters.count > 5
+		}
+		let formField = FormField<String>(value: "abc", validator: validatingFunction)
+		XCTAssertFalse(formField.isValid())
+
+		formField.value = "swiftIndia"
+		XCTAssertTrue(formField.isValid())
+	}
+
+	func test_FormField_IsValid_Int() {
+		let validatingFunction: (Int) -> Bool = { number in
+			return number > 5
+		}
+
+		let formField = FormField<Int>(value: 6, validator: validatingFunction)
+		XCTAssertFalse(formField.isValid())
+
+		formField.value = 2
+		XCTAssertTrue(formField.isValid())
+	}
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
