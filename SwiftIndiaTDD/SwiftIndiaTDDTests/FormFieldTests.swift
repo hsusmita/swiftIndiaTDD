@@ -19,15 +19,26 @@ class FormFieldTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-	func test_FormField_Validate() {
+	func test_FormField_TestInit_String() {
 		let validatingFunction: (String) -> Bool = { string in
 			return string.characters.count > 5
 		}
-		let formField = FormField(value: "abc", validator: validatingFunction)
+		let formField = FormField<String>(value: "abc", validator: validatingFunction)
 		XCTAssert(formField.value == "abc")
 
 		formField.value = "swiftIndia"
 		XCTAssert(formField.value == "swiftIndia")
+	}
+
+	func test_FormField_TestInit_Int() {
+		let validatingFunction: (Int) -> Bool = { number in
+			return number > 5
+		}
+		let formField = FormField<Int>(value: 6, validator: validatingFunction)
+		XCTAssert(formField.value == 6)
+
+		formField.value = 7
+		XCTAssert(formField.value == 7)
 	}
 
     override func tearDown() {
