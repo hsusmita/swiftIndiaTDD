@@ -16,4 +16,8 @@ class FormField<T> {
 		self.value = value
 		self.validator = validator
 	}
+
+	func isValid() -> Bool {
+		return self.validator(self.value)
+	}
 }

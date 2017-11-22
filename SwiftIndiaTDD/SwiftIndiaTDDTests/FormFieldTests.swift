@@ -58,10 +58,10 @@ class FormFieldTests: XCTestCase {
 		}
 
 		let formField = FormField<Int>(value: 6, validator: validatingFunction)
-		XCTAssertFalse(formField.isValid())
+		XCTAssertTrue(formField.isValid())
 
 		formField.value = 2
-		XCTAssertTrue(formField.isValid())
+		XCTAssertFalse(formField.isValid())
 	}
 
     override func tearDown() {
