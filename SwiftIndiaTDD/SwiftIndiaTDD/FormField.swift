@@ -9,5 +9,11 @@
 import Foundation
 
 class FormField {
-	init(value: String, validator: @escaping (String) -> Bool ) {}
+	var value: String
+	let validator: (String) -> Bool
+
+	init(value: String, validator: @escaping (String) -> Bool ) {
+		self.value = value
+		self.validator = validator
+	}
 }
