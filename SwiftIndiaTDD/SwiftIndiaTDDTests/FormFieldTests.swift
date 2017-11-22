@@ -24,6 +24,10 @@ class FormFieldTests: XCTestCase {
 			return string.characters.count > 5
 		}
 		let formField = FormField(value: "abc", validator: validatingFunction)
+		XCTAssert(formField.value == "abc")
+
+		formField.value = "swiftIndia"
+		XCTAssert(formField.value == "swiftIndia")
 	}
 
     override func tearDown() {
