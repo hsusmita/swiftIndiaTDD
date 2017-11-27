@@ -31,6 +31,12 @@ class SignupVCTests: XCTestCase {
 		XCTAssertNotNil(sut.passwordTextField.delegate)
 		XCTAssertNotNil(sut.confirmPasswordTextField.delegate)
 	}
+
+	func test_usernameTextField_textChange() {
+		sut.usernameTextField.text = "hello"
+		sut.usernameTextField.sendActions(for: .editingChanged)
+		XCTAssertEqual(sut.usernameTextField.text, sut.signupModel.usernameField.value)
+	}
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
