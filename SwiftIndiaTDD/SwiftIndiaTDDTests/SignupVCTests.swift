@@ -23,6 +23,7 @@ class SignupVCTests: XCTestCase {
 		XCTAssertNotNil(sut.usernameTextField)
 		XCTAssertNotNil(sut.passwordTextField)
 		XCTAssertNotNil(sut.confirmPasswordTextField)
+		XCTAssertNotNil(sut.signupModel)
 	}
 
 	func test_textField_delegate() {
