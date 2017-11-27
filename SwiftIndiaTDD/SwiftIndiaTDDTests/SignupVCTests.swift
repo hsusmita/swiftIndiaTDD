@@ -15,7 +15,7 @@ class SignupVCTests: XCTestCase {
     override func setUp() {
         super.setUp()
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		sut = storyboard.instantiateViewController(withIdentifier: "SingupVC") as! SignupViewController
+		sut = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupViewController
 		_ = sut.view
     }
 

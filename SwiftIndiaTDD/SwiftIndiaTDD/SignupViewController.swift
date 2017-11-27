@@ -9,8 +9,11 @@
 import UIKit
 
 class SignupViewController: UIViewController {
+	@IBOutlet var usernameTextField: UITextField!
+	@IBOutlet var passwordTextField: UITextField!
+	@IBOutlet var confirmPasswordTextField: UITextField!
 
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
