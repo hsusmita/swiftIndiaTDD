@@ -10,9 +10,9 @@ import Foundation
 
 class Form {
 	let formFields: [FormFieldProtocol]
-	let validator: () -> Bool
+	let validator: ([FormFieldProtocol]) -> Bool
 
-	init(formFields: [FormFieldProtocol], validator: @escaping () -> Bool) {
+	init(formFields: [FormFieldProtocol], validator: @escaping ([FormFieldProtocol]) -> Bool) {
 		self.formFields = formFields
 		self.validator = validator
 	}
@@ -22,7 +22,7 @@ class Form {
 		formFields.forEach { field in
 			result = result && field.isValid()
 		}
-		result = result && validator()
+		result = result && validator(formFields)
 		return result
 	}
 }
