@@ -44,8 +44,9 @@ class SignupVCTests: XCTestCase {
 		XCTAssertEqual(sut.passwordTextField.text, sut.signupModel.passwordField.value)
 	}
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+	func test_confirm_passwordTextField_textChange() {
+		sut.confirmPasswordTextField.text = "helloworld"
+		sut.confirmPasswordTextField.sendActions(for: .editingChanged)
+		XCTAssertEqual(sut.confirmPasswordTextField.text, sut.signupModel.confirmPasswordField.value)
+	}
 }
