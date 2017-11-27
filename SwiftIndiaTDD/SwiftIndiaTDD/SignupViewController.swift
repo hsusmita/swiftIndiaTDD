@@ -24,7 +24,11 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+	@IBAction func usernameEditingChanged(_ sender: Any) {
+		signupModel.usernameField.value = usernameTextField.text ?? ""
+	}
+
+	/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -33,5 +37,4 @@ class SignupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
