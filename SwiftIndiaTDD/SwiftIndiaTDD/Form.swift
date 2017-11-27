@@ -12,4 +12,8 @@ class Form {
 	init(formFields: [FormField<String>], validator: @escaping () -> Bool) {
 
 	}
+
+	func isValid() -> Bool {
+		return true
+	}
 }

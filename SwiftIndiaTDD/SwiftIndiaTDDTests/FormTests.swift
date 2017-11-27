@@ -41,5 +41,9 @@ class FormTests: XCTestCase {
 
 		let form = Form(formFields: [userFormField, passwordField, confirmPasswordField], validator: dependencyValidator)
 
+		userFormField.value = "abc"
+		passwordField.value = "123456"
+		confirmPasswordField.value = "123456"
+		XCTAssertTrue(form.isValid())
 	}
 }
