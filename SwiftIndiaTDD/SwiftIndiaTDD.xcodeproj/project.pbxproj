@@ -20,6 +20,7 @@
 		7886DF1A1FCC111A00342590 /* SignupVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF191FCC111A00342590 /* SignupVCTests.swift */; };
 		7886DF1C1FCC119400342590 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1B1FCC119400342590 /* SignupViewController.swift */; };
 		7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */; };
+		7886DF201FCC150000342590 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1F1FCC150000342590 /* SignupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7886DF191FCC111A00342590 /* SignupVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVCTests.swift; sourceTree = "<group>"; };
 		7886DF1B1FCC119400342590 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
+		7886DF1F1FCC150000342590 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				787DE1081FC516A50085C538 /* FormField.swift */,
 				7886DF171FCC070700342590 /* Form.swift */,
 				7886DF1B1FCC119400342590 /* SignupViewController.swift */,
+				7886DF1F1FCC150000342590 /* SignupViewModel.swift */,
 			);
 			path = SwiftIndiaTDD;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7886DF201FCC150000342590 /* SignupViewModel.swift in Sources */,
 				787DE1091FC516A50085C538 /* FormField.swift in Sources */,
 				7886DF181FCC070700342590 /* Form.swift in Sources */,
 				7886DF1C1FCC119400342590 /* SignupViewController.swift in Sources */,
