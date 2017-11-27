@@ -36,8 +36,14 @@ class SignupViewController: UIViewController {
 	@IBAction func confirmPasswordEditingChanged(_ sender: Any) {
 		signupModel.confirmPasswordField.value = confirmPasswordTextField.text ?? ""
 	}
+
+	@IBAction func submitButtonTapped(_ sender: Any) {
+		signupModel.submit()
+	}
+
 	/*
-    // MARK: - Navigation
+
+	// MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
