@@ -21,6 +21,7 @@
 		7886DF1C1FCC119400342590 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1B1FCC119400342590 /* SignupViewController.swift */; };
 		7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */; };
 		7886DF201FCC150000342590 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1F1FCC150000342590 /* SignupViewModel.swift */; };
+		7886DF241FCC270C00342590 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF231FCC270C00342590 /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7886DF1B1FCC119400342590 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
 		7886DF1F1FCC150000342590 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		7886DF231FCC270C00342590 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				787DE10A1FC51F2E0085C538 /* FormTests.swift */,
 				7886DF191FCC111A00342590 /* SignupVCTests.swift */,
 				7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */,
+				7886DF231FCC270C00342590 /* NetworkManagerTests.swift */,
 			);
 			path = SwiftIndiaTDDTests;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7886DF241FCC270C00342590 /* NetworkManagerTests.swift in Sources */,
 				7886DF1A1FCC111A00342590 /* SignupVCTests.swift in Sources */,
 				7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */,
 				784F3B421FC3CDBA00CC60FF /* FormFieldTests.swift in Sources */,
