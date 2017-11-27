@@ -56,4 +56,39 @@ class FormTests: XCTestCase {
 		confirmPasswordField.value = "123655"
 		XCTAssertFalse(form.isValid())
 	}
+
+	func testFormWithTermsAndCondition() {
+		let userFormField = FormField<String>(value: "", validator: { string in
+			return !string.isEmpty
+		})
+		let passwordField = FormField<String>(value: "", validator: { string in
+			return string.characters.count > 5
+		})
+		let confirmPasswordField = FormField<String>(value: "", validator: { string in
+			return string.characters.count > 5
+		})
+
+		let termsRead = FormField<Bool>(value: false) { $0 }
+
+		let dependencyValidator: () -> Bool = {
+			return passwordField.value == confirmPasswordField.value
+		}
+
+		let form = Form(formFields: [userFormField, passwordField, confirmPasswordField, termsRead], validator: dependencyValidator)
+
+		userFormField.value = "abc"
+		passwordField.value = "123456"
+		confirmPasswordField.value = "123456"
+		XCTAssertTrue(form.isValid())
+
+		userFormField.value = "abc"
+		passwordField.value = "123"
+		confirmPasswordField.value = "12344"
+		XCTAssertFalse(form.isValid())
+
+		userFormField.value = "abc"
+		passwordField.value = "123456"
+		confirmPasswordField.value = "123655"
+		XCTAssertFalse(form.isValid())
+	}
 }
