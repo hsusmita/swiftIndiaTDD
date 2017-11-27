@@ -31,6 +31,13 @@ class SignupViewModel {
 	}
 
 	func submit() {
-
+		networkManager.signup(username: usernameField.value, password: passwordField.value) { (result) in
+			switch result {
+			case .success:
+				print("Signup successful")
+			case .error:
+				print("Signup error")
+			}
+		}
 	}
 }
