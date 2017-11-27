@@ -9,5 +9,23 @@
 import Foundation
 
 class SignupViewModel {
+	let signupForm: Form
+	let usernameField = FormField<String>(value: "", validator: { string in
+		return !string.isEmpty
+	})
+	let passwordField = FormField<String>(value: "", validator: { string in
+		return string.characters.count > 5
+	})
+	let confirmPasswordField = FormField<String>(value: "", validator: { string in
+		return string.characters.count > 5
+	})
 
+	init() {
+		let dependencyValidator: ([FormFieldProtocol]) -> Bool = { formFields in
+			let passwordField = formFields[1] as! FormField<String>
+			let confirmPasswordField = formFields[2] as! FormField<String>
+			return passwordField.value == confirmPasswordField.value
+		}
+		signupForm = Form(formFields: [usernameField, passwordField, confirmPasswordField], validator: dependencyValidator)
+	}
 }
