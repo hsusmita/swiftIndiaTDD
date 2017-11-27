@@ -19,13 +19,12 @@ class NetworkManagerTests: XCTestCase {
 
 	func test_signup() {
 		let expectation = XCTestExpectation(description: "Signup")
-
 		sut.signup(username: "hello", password: "helloworld", completion: { result in
 			switch result {
-			case .success(let success):
+			case .success:
 				XCTAssert(true, "SignupSuccessful")
 				expectation.fulfill()
-			case .error(let error):
+			case .error:
 				XCTAssert(false, "SignupError")
 			}
 		})

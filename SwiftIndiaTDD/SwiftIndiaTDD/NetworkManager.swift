@@ -8,6 +8,16 @@
 
 import Foundation
 
+enum Result<T> {
+	case success(value: T)
+	case error(error: NSError)
+}
+
 class NetworkManager {
-	
+	func signup(username: String, password: String, completion:  @escaping (Result<Bool>) -> ()) {
+		//simulate network call
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+			completion(Result.success(value: true))
+		}
+	}
 }
