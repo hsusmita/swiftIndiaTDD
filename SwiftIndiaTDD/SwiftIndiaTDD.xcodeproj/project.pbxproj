@@ -19,6 +19,7 @@
 		7886DF181FCC070700342590 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF171FCC070700342590 /* Form.swift */; };
 		7886DF1A1FCC111A00342590 /* SignupVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF191FCC111A00342590 /* SignupVCTests.swift */; };
 		7886DF1C1FCC119400342590 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1B1FCC119400342590 /* SignupViewController.swift */; };
+		7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7886DF171FCC070700342590 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		7886DF191FCC111A00342590 /* SignupVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVCTests.swift; sourceTree = "<group>"; };
 		7886DF1B1FCC119400342590 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				784F3B411FC3CDBA00CC60FF /* FormFieldTests.swift */,
 				787DE10A1FC51F2E0085C538 /* FormTests.swift */,
 				7886DF191FCC111A00342590 /* SignupVCTests.swift */,
+				7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */,
 			);
 			path = SwiftIndiaTDDTests;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7886DF1A1FCC111A00342590 /* SignupVCTests.swift in Sources */,
+				7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */,
 				784F3B421FC3CDBA00CC60FF /* FormFieldTests.swift in Sources */,
 				78574A291FC3CC75000CEAA2 /* SwiftIndiaTDDTests.swift in Sources */,
 				787DE10B1FC51F2E0085C538 /* FormTests.swift in Sources */,
