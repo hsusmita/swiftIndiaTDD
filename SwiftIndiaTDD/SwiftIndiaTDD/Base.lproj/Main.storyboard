@@ -35,6 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="passwordEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="yMc-GI-TLg"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nU6-20-x7P"/>
                                 </connections>
                             </textField>

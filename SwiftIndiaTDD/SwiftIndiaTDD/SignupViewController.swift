@@ -28,6 +28,10 @@ class SignupViewController: UIViewController {
 		signupModel.usernameField.value = usernameTextField.text ?? ""
 	}
 
+	@IBAction func passwordEditingChanged(_ sender: Any) {
+		signupModel.passwordField.value = passwordTextField.text ?? ""
+	}
+
 	/*
     // MARK: - Navigation
 
