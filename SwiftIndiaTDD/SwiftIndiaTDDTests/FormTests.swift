@@ -50,5 +50,10 @@ class FormTests: XCTestCase {
 		passwordField.value = "123"
 		confirmPasswordField.value = "12344"
 		XCTAssertFalse(form.isValid())
+
+		userFormField.value = "abc"
+		passwordField.value = "123456"
+		confirmPasswordField.value = "123655"
+		XCTAssertFalse(form.isValid())
 	}
 }
