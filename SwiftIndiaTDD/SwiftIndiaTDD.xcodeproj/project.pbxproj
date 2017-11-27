@@ -22,6 +22,7 @@
 		7886DF1E1FCC149600342590 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */; };
 		7886DF201FCC150000342590 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF1F1FCC150000342590 /* SignupViewModel.swift */; };
 		7886DF241FCC270C00342590 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF231FCC270C00342590 /* NetworkManagerTests.swift */; };
+		7886DF261FCC276200342590 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886DF251FCC276200342590 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7886DF1D1FCC149600342590 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
 		7886DF1F1FCC150000342590 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		7886DF231FCC270C00342590 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		7886DF251FCC276200342590 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				7886DF171FCC070700342590 /* Form.swift */,
 				7886DF1B1FCC119400342590 /* SignupViewController.swift */,
 				7886DF1F1FCC150000342590 /* SignupViewModel.swift */,
+				7886DF251FCC276200342590 /* NetworkManager.swift */,
 			);
 			path = SwiftIndiaTDD;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				7886DF201FCC150000342590 /* SignupViewModel.swift in Sources */,
 				787DE1091FC516A50085C538 /* FormField.swift in Sources */,
 				7886DF181FCC070700342590 /* Form.swift in Sources */,
+				7886DF261FCC276200342590 /* NetworkManager.swift in Sources */,
 				7886DF1C1FCC119400342590 /* SignupViewController.swift in Sources */,
 				78574A161FC3CC75000CEAA2 /* ViewController.swift in Sources */,
 				78574A141FC3CC75000CEAA2 /* AppDelegate.swift in Sources */,
