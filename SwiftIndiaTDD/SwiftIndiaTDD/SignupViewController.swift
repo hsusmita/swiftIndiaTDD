@@ -27,14 +27,17 @@ class SignupViewController: UIViewController {
 
 	@IBAction func usernameEditingChanged(_ sender: Any) {
 		signupModel.usernameField.value = usernameTextField.text ?? ""
+		submitButton.isEnabled = signupModel.signupForm.isValid()
 	}
 
 	@IBAction func passwordEditingChanged(_ sender: Any) {
 		signupModel.passwordField.value = passwordTextField.text ?? ""
+		submitButton.isEnabled = signupModel.signupForm.isValid()
 	}
 
 	@IBAction func confirmPasswordEditingChanged(_ sender: Any) {
 		signupModel.confirmPasswordField.value = confirmPasswordTextField.text ?? ""
+		submitButton.isEnabled = signupModel.signupForm.isValid()
 	}
 
 	@IBAction func submitButtonTapped(_ sender: Any) {
