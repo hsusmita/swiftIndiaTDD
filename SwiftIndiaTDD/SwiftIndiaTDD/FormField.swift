@@ -8,7 +8,11 @@
 
 import Foundation
 
-class FormField<T> {
+protocol FormFieldProtocol {
+	func isValid() -> Bool
+}
+
+class FormField<T>: FormFieldProtocol {
 	var value: T
 	let validator: (T) -> Bool
 

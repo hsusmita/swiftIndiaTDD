@@ -9,10 +9,10 @@
 import Foundation
 
 class Form {
-	let formFields: [FormField<String>]
+	let formFields: [FormFieldProtocol]
 	let validator: () -> Bool
 
-	init(formFields: [FormField<String>], validator: @escaping () -> Bool) {
+	init(formFields: [FormFieldProtocol], validator: @escaping () -> Bool) {
 		self.formFields = formFields
 		self.validator = validator
 	}
