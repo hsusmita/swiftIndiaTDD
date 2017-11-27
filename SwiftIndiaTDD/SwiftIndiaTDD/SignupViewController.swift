@@ -13,6 +13,8 @@ class SignupViewController: UIViewController {
 	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var confirmPasswordTextField: UITextField!
 
+	let signupModel = SignupViewModel()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
