@@ -28,4 +28,8 @@ class SignupViewModel {
 		}
 		signupForm = Form(formFields: [usernameField, passwordField, confirmPasswordField], validator: dependencyValidator)
 	}
+
+	func submit() {
+
+	}
 }

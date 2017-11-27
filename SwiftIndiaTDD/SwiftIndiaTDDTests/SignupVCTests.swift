@@ -16,6 +16,7 @@ class SignupVCTests: XCTestCase {
         super.setUp()
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 		sut = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupViewController
+		sut.signupModel = SignupViewModel()
 		_ = sut.view
     }
 
@@ -50,4 +51,21 @@ class SignupVCTests: XCTestCase {
 		sut.confirmPasswordTextField.sendActions(for: .editingChanged)
 		XCTAssertEqual(sut.confirmPasswordTextField.text, sut.signupModel.confirmPasswordField.value)
 	}
+
+	func test_submitButton_tap_calls_submit() {
+		let signupModel = MockSignupModel()
+		sut.signupModel = signupModel
+		sut.submitButton.sendActions(for: .touchUpInside)
+		XCTAssertTrue(signupModel.submitCalled)
+	}
+
+	private class MockSignupModel: SignupViewModel {
+		var submitCalled = false
+
+		override func submit() {
+			super.submit()
+			submitCalled = true
+		}
+	}
 }
+

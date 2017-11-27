@@ -14,7 +14,7 @@ class SignupViewController: UIViewController {
 	@IBOutlet var confirmPasswordTextField: UITextField!
 	@IBOutlet var submitButton: UIButton!
 
-	let signupModel = SignupViewModel()
+	var signupModel: SignupViewModel!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
