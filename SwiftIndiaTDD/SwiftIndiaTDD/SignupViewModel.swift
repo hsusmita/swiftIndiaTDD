@@ -19,7 +19,8 @@ class SignupViewModel {
 	let confirmPasswordField = FormField<String>(value: "", validator: { string in
 		return string.characters.count > 5
 	})
-
+	var networkManager = NetworkManager()
+	
 	init() {
 		let dependencyValidator: ([FormFieldProtocol]) -> Bool = { formFields in
 			let passwordField = formFields[1] as! FormField<String>
