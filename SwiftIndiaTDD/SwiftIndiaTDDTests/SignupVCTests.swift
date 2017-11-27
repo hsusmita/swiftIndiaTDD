@@ -59,6 +59,32 @@ class SignupVCTests: XCTestCase {
 		XCTAssertTrue(signupModel.submitCalled)
 	}
 
+	func test_submit_button_active_for_valid_form() {
+		sut.usernameTextField.text = "hello"
+		sut.usernameTextField.sendActions(for: .editingChanged)
+
+		sut.passwordTextField.text = "helloworld"
+		sut.passwordTextField.sendActions(for: .editingChanged)
+
+		sut.confirmPasswordTextField.text = "helloworld"
+		sut.confirmPasswordTextField.sendActions(for: .editingChanged)
+
+		XCTAssertTrue(sut.submitButton.isEnabled)
+	}
+
+	func test_submit_button_inactive_for_invalid_form() {
+		sut.usernameTextField.text = "hello"
+		sut.usernameTextField.sendActions(for: .editingChanged)
+
+		sut.passwordTextField.text = "hello"
+		sut.passwordTextField.sendActions(for: .editingChanged)
+
+		sut.confirmPasswordTextField.text = "helloworld"
+		sut.confirmPasswordTextField.sendActions(for: .editingChanged)
+
+		XCTAssertFalse(sut.submitButton.isEnabled)
+	}
+
 	private class MockSignupModel: SignupViewModel {
 		var submitCalled = false
 
