@@ -12,6 +12,7 @@ class SignupViewController: UIViewController {
 	@IBOutlet var usernameTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var confirmPasswordTextField: UITextField!
+	@IBOutlet var submitButton: UIButton!
 
 	let signupModel = SignupViewModel()
 	
