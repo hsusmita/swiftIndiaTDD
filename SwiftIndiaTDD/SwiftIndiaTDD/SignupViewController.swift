@@ -32,6 +32,9 @@ class SignupViewController: UIViewController {
 		signupModel.passwordField.value = passwordTextField.text ?? ""
 	}
 
+	@IBAction func confirmPasswordEditingChanged(_ sender: Any) {
+		signupModel.confirmPasswordField.value = confirmPasswordTextField.text ?? ""
+	}
 	/*
     // MARK: - Navigation
 
