@@ -35,7 +35,9 @@ class FormTests: XCTestCase {
 			return string.characters.count > 5
 		})
 
-		let dependencyValidator: () -> Bool = {
+		let dependencyValidator: ([FormFieldProtocol]) -> Bool = { formFields in
+			let passwordField = formFields[1] as! FormField<String>
+			let confirmPasswordField = formFields[2] as! FormField<String>
 			return passwordField.value == confirmPasswordField.value
 		}
 
@@ -70,7 +72,9 @@ class FormTests: XCTestCase {
 
 		let termsRead = FormField<Bool>(value: false) { $0 }
 
-		let dependencyValidator: () -> Bool = {
+		let dependencyValidator: ([FormFieldProtocol]) -> Bool = { formFields in
+			let passwordField = formFields[1] as! FormField<String>
+			let confirmPasswordField = formFields[2] as! FormField<String>
 			return passwordField.value == confirmPasswordField.value
 		}
 
